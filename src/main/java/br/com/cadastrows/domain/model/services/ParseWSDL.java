@@ -1,6 +1,6 @@
-package br.com.cadastrows.application.services;
+package br.com.cadastrows.domain.model.services;
 
-import br.com.cadastrows.application.interfaces.IParseWSDL;
+import br.com.cadastrows.domain.model.interfaces.IParseWSDL;
 import br.com.cadastrows.domain.model.entities.Operacao;
 import br.com.cadastrows.domain.model.entities.Parametro;
 import br.com.cadastrows.domain.model.entities.WSDL;
@@ -13,13 +13,14 @@ import java.util.*;
 
 public class ParseWSDL implements IParseWSDL {
 
+    // TODO: parse ReturnCode do webservice EmailVerNoTestEmail
     @Override
     public WSDL doParse(String url) {
         WSDL wsdl = new WSDL(url);
         wsdl.setWsdl();
 
         WSDLParser parser = new WSDLParser();
-        Definitions defs = parser.parse(url);
+        Definitions defs = parser.parse(wsdl.getWsdl());
 
         for (PortType pt : defs.getPortTypes()) {
             if (pt.getName().contains("Soap")) {

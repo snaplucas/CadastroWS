@@ -156,8 +156,7 @@ public class ParseWSTest {
     @Test
     public void doParseService() {
         String url = "http://ws.cdyne.com/emailverify/Emailvernotestemail.asmx?wsdl";
-        WSDL wsdl = new WSDL();
-        wsdl.setUrl(url);
+        WSDL wsdl = new WSDL(url);
 
         WSDLParser parser = new WSDLParser();
         Definitions defs = parser.parse(url);

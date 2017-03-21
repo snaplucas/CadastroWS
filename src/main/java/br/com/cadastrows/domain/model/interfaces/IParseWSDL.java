@@ -1,4 +1,4 @@
-package br.com.cadastrows.application.interfaces;
+package br.com.cadastrows.domain.model.interfaces;
 
 import br.com.cadastrows.domain.model.entities.WSDL;
 
