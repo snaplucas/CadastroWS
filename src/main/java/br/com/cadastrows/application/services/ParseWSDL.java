@@ -39,7 +39,6 @@ public class ParseWSDL implements IParseWSDL {
                 }
             }
         }
-
         return wsdl;
     }
 
