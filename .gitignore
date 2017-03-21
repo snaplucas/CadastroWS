@@ -55,6 +55,5 @@ crashlytics-build.properties
 fabric.properties
 
 .idea
-src/main/java/br/com/cadastrows/port/adapters/persistence/
 target/generated-sources/
 target/generated-test-sources/
