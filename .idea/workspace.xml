@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab39f337-1473-43df-8c99-be5457e6108a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/port/adapters/soap/utils/SoapMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/cadastrows/port/adapters/soap/utils/SoapMessageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/cadastrows/domain/model/entities/Operacao.class" afterPath="$PROJECT_DIR$/target/classes/br/com/cadastrows/domain/model/entities/Operacao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/cadastrows/domain/model/entities/WSDL.class" afterPath="$PROJECT_DIR$/target/classes/br/com/cadastrows/domain/model/entities/WSDL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/br/com/cadastrows/application/services/ParseWSDLTest.class" afterPath="$PROJECT_DIR$/target/test-classes/br/com/cadastrows/application/services/ParseWSDLTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/ParametroDTO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/WSDLdto.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/WSDLdto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/entities/Operacao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/entities/Operacao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/entities/WSDL.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/entities/WSDL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/interfaces/IWSDLService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/interfaces/IWSDLService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/services/ParseWSDL.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/services/ParseWSDL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/services/WSDLService.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/services/WSDLService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CallSoapTest.java" afterPath="$PROJECT_DIR$/src/test/java/CallSoapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/br/com/cadastrows/application/services/ParseWSDLTest.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/cadastrows/application/services/ParseWSDLTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/port/adapters/soap/utils/SoapMessage.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/cadastrows/port/adapters/soap/utils/SoapMessage.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -59,12 +49,12 @@
       <file leaf-file-name="SoapMessage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/port/adapters/soap/utils/SoapMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="945">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,8 +63,8 @@
       <file leaf-file-name="WSDL.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/entities/WSDL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#531#532#0" expanded="true" />
@@ -141,8 +131,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -153,6 +143,7 @@
       <find>advanced</find>
       <find>call</find>
       <find>soappr</find>
+      <find>getop</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,9 +188,10 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/interfaces/IWSDLService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/services/WSDLService.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/cadastrows/port/adapters/soap/utils/SoapMessageTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/WSDLdto.java" />
         <option value="$PROJECT_DIR$/src/test/java/CallSoapTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/ParametroDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/cadastrows/port/adapters/soap/utils/SoapMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/WSDLdto.java" />
       </list>
     </option>
   </component>
@@ -647,6 +639,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.cadastrows.application.dto" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CallSoapTest.main">
@@ -1303,18 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/entities/WSDL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/entities/Operacao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1381,19 +1364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/WSDLdto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#209#210#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/services/WSDLService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1415,6 +1385,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/domain/model/entities/WSDL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CallSoapTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -1425,14 +1407,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/ParametroDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/application/dto/WSDLdto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/cadastrows/port/adapters/soap/utils/SoapMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="945">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,17 +1,32 @@
 package br.com.cadastrows.application.dto;
 
-import br.com.cadastrows.domain.model.entities.Operacao;
+import java.util.List;
 
 public class WSDLdto {
 
     private String url;
-    private Operacao operacao;
+    private String operacao;
+    private List<ParametroDTO> parametroDTOList;
+    private String resultado;
+
 
     public String getUrl() {
         return url;
     }
 
-    public Operacao getOperacao() {
+    public String getOperacao() {
         return operacao;
+    }
+
+    public List<ParametroDTO> getParametroDTOList() {
+        return parametroDTOList;
+    }
+
+    public String getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(String resultado) {
+        this.resultado = resultado;
     }
 }

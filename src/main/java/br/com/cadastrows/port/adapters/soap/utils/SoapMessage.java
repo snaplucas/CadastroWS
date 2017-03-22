@@ -1,7 +1,7 @@
 package br.com.cadastrows.port.adapters.soap.utils;
 
+import br.com.cadastrows.application.dto.ParametroDTO;
 import br.com.cadastrows.application.dto.WSDLdto;
-import br.com.cadastrows.domain.model.entities.Parametro;
 
 import javax.xml.soap.*;
 import java.io.ByteArrayOutputStream;
@@ -50,13 +50,13 @@ public class SoapMessage {
 
     private void montarSoapHeaders(SOAPMessage soapMessage, String serverURI) {
         MimeHeaders headers = soapMessage.getMimeHeaders();
-        headers.addHeader("SOAPAction", serverURI + wsdl.getOperacao().getNome());
+        headers.addHeader("SOAPAction", serverURI + wsdl.getOperacao());
     }
 
     private void montarSoapBody(SOAPEnvelope envelope) throws SOAPException {
         SOAPBody soapBody = envelope.getBody();
-        SOAPElement soapBodyElemParent = soapBody.addChildElement(wsdl.getOperacao().getNome(), "teste");
-        for (Parametro parametro : wsdl.getOperacao().getParametroList()) {
+        SOAPElement soapBodyElemParent = soapBody.addChildElement(wsdl.getOperacao(), "teste");
+        for (ParametroDTO parametro : wsdl.getParametroDTOList()) {
             SOAPElement soapBodyElem = soapBodyElemParent.addChildElement(parametro.getNome(), "teste");
             soapBodyElem.addTextNode(parametro.getValor());
         }
