@@ -15,4 +15,9 @@ public class WSDLService implements IWSDLService {
     public WSDLdto invocarWebService(WSDL webService) {
         return null;
     }
+
+    @Override
+    public WSDLdto listarWebServices() {
+        return null;
+    }
 }

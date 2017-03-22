@@ -12,9 +12,6 @@ public class WSDL {
     private List<Operacao> operacaoList;
     private boolean isValid;
 
-    private String input;
-    private String output;
-
     public WSDL(String url) {
         this.url = url;
         operacaoList = new ArrayList<>();

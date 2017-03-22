@@ -9,4 +9,6 @@ public interface IWSDLService {
 
     WSDLdto invocarWebService(WSDL webService);
 
+    WSDLdto listarWebServices();
+
 }

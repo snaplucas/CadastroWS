@@ -1,9 +1,9 @@
 package br.com.cadastrows.domain.model.services;
 
-import br.com.cadastrows.domain.model.interfaces.IParseWSDL;
 import br.com.cadastrows.domain.model.entities.Operacao;
 import br.com.cadastrows.domain.model.entities.Parametro;
 import br.com.cadastrows.domain.model.entities.WSDL;
+import br.com.cadastrows.domain.model.interfaces.IParseWSDL;
 import com.predic8.wsdl.*;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -13,7 +13,6 @@ import java.util.*;
 
 public class ParseWSDL implements IParseWSDL {
 
-    // TODO: parse ReturnCode do webservice EmailVerNoTestEmail
     @Override
     public WSDL doParse(String url) {
         WSDL wsdl = new WSDL(url);
@@ -27,15 +26,10 @@ public class ParseWSDL implements IParseWSDL {
                 for (Operation op : pt.getOperations()) {
                     Operacao operacao = new Operacao();
                     operacao.setNome(op.getName());
-                    try {
-                        for (Part part : op.getInput().getMessage().getParts()) {
-                            JSONObject json = new JSONObject(part.getElement().getAsJson());
-                            operacao.setParametroList(getParametro(json));
-                            wsdl.adicionarOperacao(operacao);
-                        }
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    for (Part part : op.getInput().getMessage().getParts()) {
+                        JSONObject json = new JSONObject(part.getElement().getAsJson());
+                        operacao.setParametroList(getParametro(json));
+                        wsdl.adicionarOperacao(operacao);
                     }
                 }
             }
@@ -46,13 +40,17 @@ public class ParseWSDL implements IParseWSDL {
     private List<Parametro> getParametro(JSONObject parametroJson) {
         List<Parametro> parametroList = new ArrayList<>();
 
-        Map<String, String> map = parse(parametroJson, new HashMap<>());
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            Parametro parametro = new Parametro();
-            parametro.setNome(entry.getKey());
-            parametro.setOpcional(entry.getValue().contains("?"));
-            parametro.setTipo(definirTipoParametro(entry.getValue()));
-            parametroList.add(parametro);
+        try {
+            Map<String, String> map = parse(parametroJson, new HashMap<>());
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                Parametro parametro = new Parametro();
+                parametro.setNome(entry.getKey());
+                parametro.setOpcional(entry.getValue().contains("?"));
+                parametro.setTipo(definirTipoParametro(entry.getValue()));
+                parametroList.add(parametro);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
         return parametroList;
     }

@@ -8,6 +8,9 @@ public class Operacao {
     private String nome;
     private List<Parametro> parametroList;
 
+    private String input;
+    private String output;
+
     public Operacao() {
         parametroList = new ArrayList<>();
     }
@@ -30,5 +33,21 @@ public class Operacao {
 
     public void setParametroList(List<Parametro> parametroList) {
         this.parametroList = parametroList;
+    }
+
+    public String getInput() {
+        return input;
+    }
+
+    public void setInput(String input) {
+        this.input = input;
+    }
+
+    public String getOutput() {
+        return output;
+    }
+
+    public void setOutput(String output) {
+        this.output = output;
     }
 }

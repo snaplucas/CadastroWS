@@ -5,6 +5,7 @@ import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
+import java.io.ByteArrayOutputStream;
 
 public class CallSoapTest {
 
@@ -18,6 +19,11 @@ public class CallSoapTest {
             // Send SOAP Message to SOAP Server
             String url = "http://ws.cdyne.com/emailverify/Emailvernotestemail.asmx";
             SOAPMessage soapResponse = soapConnection.call(createSOAPRequest(), url);
+
+            ByteArrayOutputStream writer = new ByteArrayOutputStream();
+            soapResponse.writeTo(writer);
+            System.out.println(new String(writer.toByteArray()));
+
 
             // Process the SOAP Response
             printSOAPResponse(soapResponse);
@@ -68,10 +74,4 @@ public class CallSoapTest {
         StreamResult result = new StreamResult(System.out);
         transformer.transform(sourceContent, result);
     }
-
-    @Test
-    public void some(){
-        System.out.println("do nothing");
-    }
-
 }
